@@ -546,7 +546,7 @@
             <a href="#sec-story"
                 class="flex flex-col items-center gap-1 text-midnight hover:text-[#D80088] transition group">
                 <span
-                    class="text-[9px] font-bold uppercase tracking-widest bg-white/60 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Khám
+                    class="text-[10px] font-bold uppercase tracking-widest bg-white/60 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Khám
                     phá Livotec</span>
                 <div class="bg-white p-1.5 rounded-full shadow-md animate-bounce group-hover:shadow-lg">
                     <i data-lucide="arrow-down" class="w-3 h-3"></i>
@@ -622,7 +622,7 @@
             <a href="#sec-ivo"
                 class="flex flex-col items-center gap-1.5 text-midnight hover:text-[#00b9ad] transition group">
                 <span
-                    class="text-[9px] font-bold uppercase tracking-widest bg-white/60 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Khám
+                    class="text-[10px] font-bold uppercase tracking-widest bg-white/60 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Khám
                     phá công nghệ</span>
                 <div class="bg-white p-2 rounded-full shadow-md animate-bounce group-hover:shadow-lg">
                     <i data-lucide="arrow-down" class="w-3 h-3 text-midnight"></i>
@@ -894,7 +894,7 @@
             <a href="#sec-amcaai"
                 class="flex flex-col items-center gap-1.5 text-[#D80088] hover:text-blush transition group">
                 <span
-                    class="text-[9px] font-bold uppercase tracking-widest bg-white/60 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Khám
+                    class="text-[10px] font-bold uppercase tracking-widest bg-white/60 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Khám
                     phá sự bền bỉ</span>
                 <div class="bg-white p-2 rounded-full shadow-sm animate-bounce">
                     <i data-lucide="arrow-down" class="w-3 h-3"></i>
@@ -903,9 +903,12 @@
         </div>
     </section>
 
-    <!-- SECTION 4: DURABILITY (AMCAAI) -->
-    <section id="sec-amcaai" class="relative bg-beige py-10 md:py-12 min-h-[85vh] flex flex-col overflow-hidden">
-        <!-- Bluegrey abstract shapes spinning -->
+    <!-- SECTION 4: DURABILITY (AMCAAI) - FIXED -->
+    <section id="sec-amcaai"
+        class="relative bg-beige py-3 md:py-4 min-h-0 h-screen max-h-[1000px] flex flex-col overflow-hidden scroll-mt-[64px] pt-[64px]">
+
+
+        <!-- Background blobs (quay chậm) -->
         <div
             class="absolute top-0 right-0 w-[500px] h-[500px] bg-bluegrey/30 pointer-events-none rounded-[5rem] blur-3xl animate-[spin_40s_linear_infinite]">
         </div>
@@ -913,112 +916,184 @@
             class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blush/20 pointer-events-none rounded-[4rem] blur-3xl animate-[spin_60s_linear_infinite_reverse]">
         </div>
 
-        <div class="container mx-auto px-6 relative z-10 max-w-screen-xl flex-grow">
-            <div class="text-center max-w-4xl mx-auto mb-8">
-                <!-- Tách title thành 2 dòng, cách xa nhau -->
-                <h2 class="text-2xl md:text-4xl font-extrabold text-[#D80088] mb-6 leading-tight block mt-6">
-                    CÔNG NGHỆ AMCAAI
-                    <span class="text-[#00b9ad] drop-shadow-sm block mt-4">TỰ LÀM SẠCH, CHỐNG ĂN MÒN</span>
+
+        <div class="container mx-auto px-6 relative z-10 max-w-screen-xl flex-1 flex flex-col">
+
+
+            <!-- Heading -->
+            <div class="text-center max-w-4xl mx-auto mb-2 animate-[fadeInUp_0.6s_ease-out_both]">
+                <h2 class="text-xl md:text-2xl font-extrabold mb-2 leading-tight">
+                    <span class="block text-[#D80088] leading-normal">CÔNG NGHỆ AMCAAI</span>
+                    <span class="block text-[#00b9ad] drop-shadow-sm mt-1">TỰ LÀM SẠCH, CHỐNG ĂN MÒN</span>
                 </h2>
-                <button onclick="openModal('amcaai')"
-                    class="bg-white/80 backdrop-blur-md hover:bg-bluegrey hover:text-midnight border border-white shadow-sm text-midnight px-6 py-2.5 rounded-full font-bold uppercase tracking-wider text-[11px] transition">
-                    Chi tiết công nghệ bảo vệ
+                <button onclick="openModal('amcaai')" class="bg-white/80 backdrop-blur-md border border-white shadow-md text-midnight px-6 py-2 rounded-full font-bold uppercase tracking-wider text-[11px]
+                           hover:bg-[#00b9ad] hover:text-white hover:scale-105 hover:shadow-lg
+                           transition-all duration-300">
+                    Xem chi tiết công nghệ AMCAAI
                 </button>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6 mb-6 reveal">
-                <div
-                    class="rounded-3xl overflow-hidden shadow-sm border-[4px] border-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group bg-white animate-[floatUpDown_5s_ease-in-out_infinite]">
-                    <img src="ivotec-dhv12j-inverter-acf-tu-dong-lam-sach.webp" alt="ACF tự động làm sạch"
-                        class="w-full h-24 object-contain cursor-pointer transition-transform duration-500"
-                        onclick="openLightbox(this.src)"
-                        onerror="this.src='https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400'">
+
+            <!-- 3 ảnh minh họa -->
+            <div class="grid md:grid-cols-3 gap-3 mb-3">
+                <div class="group rounded-3xl overflow-hidden shadow-sm border-[4px] border-white bg-white
+                            hover:shadow-xl hover:-translate-y-2 transition-all duration-400
+                            animate-[fadeInUp_0.6s_ease-out_0.1s_both]">
+                    <img src="ivotec-dhv12j-inverter-acf-tu-dong-lam-sach.webp"
+                        alt="Công nghệ ACF tự động làm sạch dàn lạnh điều hòa Livotec" class="w-full h-24 md:h-[200px] object-contain cursor-pointer
+                               group-hover:scale-105 transition-transform duration-500"
+                        onclick="openLightbox(this.src)">
                 </div>
-                <div
-                    class="rounded-3xl overflow-hidden shadow-sm border-[4px] border-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group bg-white animate-[floatUpDown_6s_ease-in-out_infinite]">
+                <div class="group rounded-3xl overflow-hidden shadow-sm border-[4px] border-white bg-white
+                            hover:shadow-xl hover:-translate-y-2 transition-all duration-400
+                            animate-[fadeInUp_0.6s_ease-out_0.2s_both]">
                     <img src="dieu-hoa-mot-chieu-livotec-dhv12j-inverter-amcaai-chong-an-mon.webp"
-                        alt="AMCAAI chống ăn mòn"
-                        class="w-full h-24 object-contain cursor-pointer transition-transform duration-500"
-                        onclick="openLightbox(this.src)"
-                        onerror="this.src='https://images.unsplash.com/photo-1584852955561-127eec1c3b1d?auto=format&fit=crop&w=400'">
+                        alt="Công nghệ AMCAAI chống ăn mòn dàn nóng điều hòa Livotec" class="w-full h-24 md:h-[200px] object-contain cursor-pointer
+                               group-hover:scale-105 transition-transform duration-500"
+                        onclick="openLightbox(this.src)">
                 </div>
-                <div
-                    class="rounded-3xl overflow-hidden shadow-sm border-[4px] border-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group bg-white animate-[floatUpDown_7s_ease-in-out_infinite]">
-                    <img src="livotec-dhv12j-inverter-i-chill-tu-phat-hien-loi.webp" alt="i-Chill tự phát hiện lỗi"
-                        class="w-full h-24 object-contain cursor-pointer transition-transform duration-500"
-                        onclick="openLightbox(this.src)"
-                        onerror="this.src='https://images.unsplash.com/photo-1611117775350-ac3950990985?auto=format&fit=crop&w=400'">
+                <div class="group rounded-3xl overflow-hidden shadow-sm border-[4px] border-white bg-white
+                            hover:shadow-xl hover:-translate-y-2 transition-all duration-400
+                            animate-[fadeInUp_0.6s_ease-out_0.3s_both]">
+                    <img src="livotec-dhv12j-inverter-i-chill-tu-phat-hien-loi.webp"
+                        alt="Công nghệ i-Chill tự phát hiện lỗi điều hòa Livotec" class="w-full h-24 md:h-[200px] object-contain cursor-pointer
+                               group-hover:scale-105 transition-transform duration-500"
+                        onclick="openLightbox(this.src)">
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- 2 cột: ACF Flow + Golden Fin — flex-1 để lấp đầy không gian còn lại -->
+            <div class="grid md:grid-cols-2 gap-3 items-stretch">
+
+
                 <!-- ACF Flow -->
-                <div
-                    class="bg-white/90 backdrop-blur-md p-6 md:p-6 rounded-[2rem] border border-white shadow-sm w-full">
-                    <h3 class="text-base md:text-lg font-bold text-midnight mb-6 flex items-center gap-2">
-                        <i data-lucide="droplets" class="w-5 h-5 text-skyblue"></i> Tự làm sạch ACF (Dàn lạnh)
+                <div class="bg-white/90 backdrop-blur-md p-3 md:p-4 rounded-[2rem] border border-white shadow-sm w-full
+                            hover:shadow-lg transition-shadow duration-400
+                            animate-[fadeInUp_0.6s_ease-out_0.4s_both]
+                            flex flex-col justify-center">
+                    <h3 class="text-base md:text-lg font-bold text-midnight mb-3 flex items-center gap-2">
+                        <div
+                            class="w-8 h-8 bg-gradient-to-br from-skyblue/30 to-teal/20 rounded-lg flex items-center justify-center">
+                            <i data-lucide="droplets" class="w-4 h-4 text-skyblue"></i>
+                        </div>
+                        Tự làm sạch ACF (Dàn lạnh)
                     </h3>
                     <div class="flex flex-col sm:flex-row justify-between items-center gap-3 relative w-full">
-                        <!-- Animated progress line (Nằm dưới bằng -z-10) -->
+
+
+                        <!-- Animated progress line -->
                         <div
-                            class="absolute top-1/2 left-0 w-full h-1 bg-warmgrey/50 -z-10 hidden sm:block overflow-hidden rounded-full">
-                            <div class="h-full bg-skyblue w-1/3 animate-[slideRight_2s_linear_infinite]"></div>
+                            class="absolute top-1/2 left-0 w-full h-1 bg-warmgrey/30 -z-10 hidden sm:block overflow-hidden rounded-full">
+                            <div
+                                class="h-full bg-gradient-to-r from-skyblue to-blush rounded-full animate-[slideRight_3s_ease-in-out_infinite]">
+                            </div>
                         </div>
 
-                        <!-- Các step bọc trong relative z-20 và có màu nền để CHE mất line -->
-                        <div
-                            class="relative z-20 flex flex-col items-center bg-white p-3.5 rounded-2xl shadow-md w-full sm:w-auto border border-white hover:border-skyblue transition-colors">
-                            <i data-lucide="cloud-rain" class="w-5 h-5 text-skyblue mb-1.5 animate-pulse"></i>
+
+                        <!-- Step 1 -->
+                        <div class="acf-step group relative z-20 flex flex-col items-center bg-white p-3.5 rounded-2xl shadow-md w-full sm:w-auto
+                                    border border-white hover:border-skyblue hover:shadow-lg hover:-translate-y-1
+                                    transition-all duration-300">
+                            <div class="w-9 h-9 bg-skyblue/15 rounded-xl flex items-center justify-center mb-1.5
+                                        group-hover:bg-skyblue/30 group-hover:scale-110 transition-all duration-300">
+                                <i data-lucide="cloud-rain" class="w-5 h-5 text-skyblue"></i>
+                            </div>
                             <span class="text-[10px] font-bold text-midnight">1. Ngưng tụ</span>
                         </div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-warmgrey sm:hidden"></i>
 
-                        <div
-                            class="relative z-20 flex flex-col items-center bg-white p-3.5 rounded-2xl shadow-md w-full sm:w-auto border border-white hover:border-skyblue transition-colors">
-                            <i data-lucide="snowflake" class="w-5 h-5 text-skyblue mb-1.5 animate-pulse"></i>
+
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-warmgrey/60 sm:hidden"></i>
+
+
+                        <!-- Step 2 -->
+                        <div class="acf-step group relative z-20 flex flex-col items-center bg-white p-3.5 rounded-2xl shadow-md w-full sm:w-auto
+                                    border border-white hover:border-skyblue hover:shadow-lg hover:-translate-y-1
+                                    transition-all duration-300">
+                            <div class="w-9 h-9 bg-skyblue/15 rounded-xl flex items-center justify-center mb-1.5
+                                        group-hover:bg-skyblue/30 group-hover:scale-110 transition-all duration-300">
+                                <i data-lucide="snowflake" class="w-5 h-5 text-skyblue"></i>
+                            </div>
                             <span class="text-[10px] font-bold text-midnight">2. Đóng băng</span>
                         </div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-warmgrey sm:hidden"></i>
 
-                        <div
-                            class="relative z-20 flex flex-col items-center bg-white p-3.5 rounded-2xl shadow-md w-full sm:w-auto border border-white hover:border-blush transition-colors">
-                            <i data-lucide="flame" class="w-5 h-5 text-blush mb-1.5 animate-pulse"></i>
+
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-warmgrey/60 sm:hidden"></i>
+
+
+                        <!-- Step 3 -->
+                        <div class="acf-step group relative z-20 flex flex-col items-center bg-white p-3.5 rounded-2xl shadow-md w-full sm:w-auto
+                                    border border-white hover:border-blush hover:shadow-lg hover:-translate-y-1
+                                    transition-all duration-300">
+                            <div class="w-9 h-9 bg-blush/15 rounded-xl flex items-center justify-center mb-1.5
+                                        group-hover:bg-blush/30 group-hover:scale-110 transition-all duration-300">
+                                <i data-lucide="flame" class="w-5 h-5 text-blush"></i>
+                            </div>
                             <span class="text-[10px] font-bold text-midnight">3. Rã đông</span>
                         </div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-warmgrey sm:hidden"></i>
 
-                        <!-- Đặc biệt fix khối 4 -->
-                        <div
-                            class="relative z-20 flex flex-col items-center bg-white p-3.5 rounded-2xl shadow-md w-full sm:w-auto border-2 border-blush hover:scale-105 transition-transform">
-                            <i data-lucide="wind" class="w-5 h-5 text-blush mb-1.5 animate-pulse"></i>
+
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-warmgrey/60 sm:hidden"></i>
+
+
+                        <!-- Step 4 (highlight) -->
+                        <div class="acf-step group relative z-20 flex flex-col items-center bg-white p-3.5 rounded-2xl shadow-md w-full sm:w-auto
+                                    border-2 border-blush hover:shadow-lg hover:-translate-y-1 hover:scale-105
+                                    transition-all duration-300">
+                            <div
+                                class="w-9 h-9 bg-blush/20 rounded-xl flex items-center justify-center mb-1.5
+                                        group-hover:bg-blush/40 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                <i data-lucide="wind" class="w-5 h-5 text-blush"></i>
+                            </div>
                             <span class="text-[10px] font-bold text-midnight">4. Sấy khô</span>
                         </div>
                     </div>
                 </div>
 
+
                 <!-- Golden Fin Shield -->
-                <div
-                    class="bg-white/90 backdrop-blur-md p-6 md:p-6 rounded-[2rem] border border-white shadow-sm flex flex-col justify-center">
+                <div class="bg-white/90 backdrop-blur-md p-3 md:p-4 rounded-[2rem] border border-white shadow-sm flex flex-col justify-center
+                            hover:shadow-lg transition-shadow duration-400
+                            animate-[fadeInUp_0.6s_ease-out_0.5s_both]">
                     <h3 class="text-base md:text-lg font-bold text-midnight mb-3 flex items-center gap-2">
-                        <i data-lucide="shield" class="w-5 h-5 text-teal"></i> Golden Fin (Dàn nóng)
+                        <div
+                            class="w-8 h-8 bg-gradient-to-br from-yellow-200/50 to-teal/20 rounded-lg flex items-center justify-center">
+                            <i data-lucide="shield" class="w-4 h-4 text-teal"></i>
+                        </div>
+                        Golden Fin (Dàn nóng)
                     </h3>
-                    <p class="text-midnight/70 text-xs mb-6 font-medium leading-relaxed">Lớp phủ mạ vàng chống ăn mòn
-                        kết hợp lưới bảo vệ đặc biệt, dàn nóng bền bỉ 10 năm trước mọi thời tiết khắc nghiệt nhất.</p>
+                    <p class="text-midnight/70 text-xs mb-3 font-medium leading-relaxed text-justify">
+                        Lớp phủ mạ vàng chống ăn mòn kết hợp lưới bảo vệ đặc biệt, dàn nóng bền bỉ <strong
+                            class="text-teal">10 năm</strong> trước mọi thời tiết khắc nghiệt.
+                    </p>
+
 
                     <div class="grid grid-cols-2 gap-3">
-                        <div
-                            class="bg-beige p-3 rounded-xl flex items-center gap-2 shadow-sm border border-white hover:bg-white transition-colors">
-                            <i data-lucide="cloud-drizzle" class="w-4 h-4 text-charcoal"></i>
+                        <div class="group bg-beige p-3 rounded-xl flex items-center gap-2 shadow-sm border border-white
+                                    hover:bg-white hover:shadow-md hover:-translate-y-0.5
+                                    transition-all duration-300">
+                            <div class="w-7 h-7 bg-white rounded-lg flex items-center justify-center shadow-sm
+                                        group-hover:bg-skyblue/20 transition-colors duration-300">
+                                <i data-lucide="cloud-drizzle" class="w-3.5 h-3.5 text-charcoal"></i>
+                            </div>
                             <span class="text-[11px] font-bold text-midnight">Chống mưa axit</span>
                         </div>
-                        <div
-                            class="bg-beige p-3 rounded-xl flex items-center gap-2 shadow-sm border border-white hover:bg-white transition-colors">
-                            <i data-lucide="waves" class="w-4 h-4 text-teal"></i>
+                        <div class="group bg-beige p-3 rounded-xl flex items-center gap-2 shadow-sm border border-white
+                                    hover:bg-white hover:shadow-md hover:-translate-y-0.5
+                                    transition-all duration-300">
+                            <div class="w-7 h-7 bg-white rounded-lg flex items-center justify-center shadow-sm
+                                        group-hover:bg-teal/20 transition-colors duration-300">
+                                <i data-lucide="waves" class="w-3.5 h-3.5 text-teal"></i>
+                            </div>
                             <span class="text-[11px] font-bold text-midnight">Chống muối biển</span>
                         </div>
-                        <div
-                            class="bg-beige p-3 rounded-xl flex items-center gap-2 col-span-2 shadow-sm border border-white hover:bg-white transition-colors">
-                            <i data-lucide="bug" class="w-4 h-4 text-charcoal"></i>
+                        <div class="group bg-beige p-3 rounded-xl flex items-center gap-2 col-span-2 shadow-sm border border-white
+                                    hover:bg-white hover:shadow-md hover:-translate-y-0.5
+                                    transition-all duration-300">
+                            <div class="w-7 h-7 bg-white rounded-lg flex items-center justify-center shadow-sm
+                                        group-hover:bg-blush/20 transition-colors duration-300">
+                                <i data-lucide="bug" class="w-3.5 h-3.5 text-charcoal"></i>
+                            </div>
                             <span class="text-[11px] font-bold text-midnight">Lưới chống côn trùng bảo vệ bo mạch</span>
                         </div>
                     </div>
@@ -1026,532 +1101,1081 @@
             </div>
         </div>
 
-        <div class="flex justify-center mt-8 relative z-20 w-full">
+
+        <!-- CTA cuối section -->
+        <div class="flex justify-center mt-2 pb-12 relative z-20 w-full animate-[fadeInUp_0.6s_ease-out_0.7s_both]">
             <a href="#sec-products"
-                class="flex flex-col items-center gap-1.5 text-midnight hover:text-[#00b9ad] transition group">
-                <span
-                    class="text-[9px] font-bold uppercase tracking-widest bg-white/60 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Xem
-                    danh mục sản phẩm</span>
-                <div class="bg-white p-2 rounded-full shadow-md animate-bounce backdrop-blur-md">
+                class="flex flex-col items-center gap-1 text-midnight hover:text-[#00b9ad] transition-colors duration-300 group">
+                <span class="text-[10px] font-bold uppercase tracking-widest bg-white/70 px-4 py-1.5 rounded-full backdrop-blur-sm shadow-sm
+                             group-hover:bg-white group-hover:shadow-md transition-all duration-300">
+                    Xem danh mục sản phẩm
+                </span>
+                <div class="bg-white p-1.5 rounded-full shadow-md backdrop-blur-md
+                            group-hover:shadow-lg group-hover:-translate-y-0.5 transition-all duration-300">
                     <i data-lucide="arrow-down" class="w-3 h-3 text-midnight"></i>
                 </div>
             </a>
         </div>
     </section>
 
-    <!-- SECTION 5: PRODUCTS (Carousel with 8 items) -->
-    <section id="sec-products" class="py-20 bg-white relative overflow-hidden min-h-[85vh] flex flex-col">
-        <div class="container mx-auto px-4 relative z-10 max-w-screen-xl flex-grow">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-extrabold leading-relaxed">
-                    <span class="block text-[#00b9ad]">CHỌN ĐIỀU HÒA LIVOTEC</span>
-                    <span class="block text-[#D80088] mt-3">CHO GIA ĐÌNH BẠN</span>
-                </h2>
-            </div>
 
-            <!-- CSS Carousel -->
-            <div id="product-carousel"
-                class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 no-scrollbar scroll-smooth w-full px-2">
+    <!-- Scroll-triggered animations cho section AMCAAI -->
+    <script>
+            (function () {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Kích hoạt fadeInUp animations
+                            entry.target.querySelectorAll('[class*="animate-[fadeInUp"]').forEach(el => {
+                                el.style.animationPlayState = 'running';
+                            });
 
-                <!-- Product 1: DHV12J -->
-                <div
-                    class="snap-center shrink-0 w-[80vw] md:w-[280px] bg-beige/30 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-warmgrey/30 flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-blush/20 rounded-bl-full -z-10"></div>
-                    <div class="bg-blush text-midnight text-[9px] font-bold px-2 py-1 rounded-full w-max mb-3">Dòng Cao
-                        Cấp (Smart-Feel)</div>
-                    <img src="Mới nhất.png" alt="DHV12J"
-                        class="w-full h-32 object-contain mb-3 relative z-10 cursor-pointer hover:scale-105 transition-transform"
-                        onclick="openLightbox(this.src)"
-                        onerror="this.src='https://livotec.com/wp-content/uploads/2024/05/DHV12J.png'">
-                    <h3 class="text-base font-bold text-midnight mb-1">Điều hòa một chiều Livotec DHV12J Inverter</h3>
-                    <!-- Rating 5 sao -->
-                    <div class="flex items-center gap-0.5 text-yellow-400 mb-2">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                    </div>
 
-                    <p class="text-[10px] text-midnight/60 mb-3 font-medium">12.000 BTU - Phù hợp 15-20m2</p>
-                    <div class="text-lg font-black text-teal mb-4 mt-auto">11.990.000₫</div>
+                            // Sequential highlight cho ACF steps
+                            const steps = entry.target.querySelectorAll('.acf-step');
+                            steps.forEach((step, i) => {
+                                setTimeout(() => {
+                                    step.classList.add('acf-step-active');
+                                    // Bỏ active sau 600ms để tạo hiệu ứng "chạy qua"
+                                    setTimeout(() => {
+                                        step.classList.remove('acf-step-active');
+                                    }, 600);
+                                }, 800 + (i * 400)); // Bắt đầu sau 0.8s, mỗi step cách 0.4s
+                            });
+                        }
+                    });
+                }, { threshold: 0.2 });
 
-                    <!-- Links Hướng dẫn -->
-                    <div class="flex flex-col gap-1.5 mb-4 border-t border-warmgrey/30 pt-3">
-                        <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="file-text" class="w-3 h-3"></i> Xem hướng dẫn sử dụng
-                        </a>
-                        <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="shield-alert" class="w-3 h-3"></i> Xem hướng dẫn bảo quản
-                        </a>
-                    </div>
 
-                    <!-- Buttons Group -->
-                    <div class="space-y-2 relative z-20 mt-auto">
-                        <button onclick="openModal('prod-dhv12j')"
-                            class="w-full bg-white border border-warmgrey/50 text-midnight py-2.5 rounded-xl font-bold text-[11px] hover:bg-blush transition shadow-sm">Xem
-                            thông số</button>
-                        <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dhv12j-inverter.html" target="_blank"
-                            class="w-full flex justify-center items-center bg-white border border-red-500 text-red-500 py-2.5 rounded-xl font-bold text-[11px] hover:bg-red-50 transition shadow-sm">
-                            Tôi muốn mua
-                        </a>
-                    </div>
-                </div>
+                const section = document.getElementById('sec-amcaai');
+                if (section) {
+                    section.querySelectorAll('[class*="animate-[fadeInUp"]').forEach(el => {
+                        el.style.animationPlayState = 'paused';
+                    });
+                    observer.observe(section);
+                }
+            })();
+    </script>
 
-                <!-- Product 2: DHV09J -->
-                <div
-                    class="snap-center shrink-0 w-[80vw] md:w-[280px] bg-beige/30 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-warmgrey/30 flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-blush/20 rounded-bl-full -z-10"></div>
-                    <div class="bg-blush text-midnight text-[9px] font-bold px-2 py-1 rounded-full w-max mb-3">Dòng Cao
-                        Cấp (Smart-Feel)</div>
-                    <img src="Mới nhất.png" alt="DHV09J"
-                        class="w-full h-32 object-contain mb-3 relative z-10 cursor-pointer hover:scale-105 transition-transform"
-                        onclick="openLightbox(this.src)"
-                        onerror="this.src='https://livotec.com/wp-content/uploads/2024/05/DHV09J.png'">
-                    <h3 class="text-base font-bold text-midnight mb-1">Điều hòa một chiều Livotec DHV09J Inverter</h3>
-                    <!-- Rating 5 sao -->
-                    <div class="flex items-center gap-0.5 text-yellow-400 mb-2">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                    </div>
-                    <p class="text-[10px] text-midnight/60 mb-3 font-medium">9.000 BTU - Phù hợp &lt; 15m2</p>
-                    <div class="text-lg font-black text-teal mb-4 mt-auto">10.790.000₫</div>
-                    <!-- Links Hướng dẫn -->
-                    <div class="flex flex-col gap-1.5 mb-4 border-t border-warmgrey/30 pt-3">
-                        <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="file-text" class="w-3 h-3"></i> Xem hướng dẫn sử dụng
-                        </a>
-                        <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="shield-alert" class="w-3 h-3"></i> Xem hướng dẫn bảo quản
-                        </a>
-                    </div>
 
-                    <div class="space-y-2 relative z-20 mt-auto">
-                        <button onclick="openModal('prod-dhv09j')"
-                            class="w-full bg-white border border-warmgrey/50 text-midnight py-2.5 rounded-xl font-bold text-[11px] hover:bg-blush transition shadow-sm">Xem
-                            thông số</button>
-                        <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dhv09j-inverter.html" target="_blank"
-                            class="w-full flex justify-center items-center bg-white border border-red-500 text-red-500 py-2.5 rounded-xl font-bold text-[11px] hover:bg-red-50 transition shadow-sm">
-                            Tôi muốn mua
-                        </a>
-                    </div>
-                </div>
+    <style>
+        /* ACF step sequential highlight */
+        .acf-step-active {
+            border-color: #00b9ad !important;
+            box-shadow: 0 0 20px rgba(0, 185, 173, 0.3) !important;
+            transform: translateY(-4px) scale(1.05);
+        }
 
-                <!-- Product 3: DHV12I -->
-                <div
-                    class="snap-center shrink-0 w-[80vw] md:w-[280px] bg-beige/30 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-warmgrey/30 flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-skyblue/20 rounded-bl-full -z-10"></div>
-                    <div class="bg-skyblue text-midnight text-[9px] font-bold px-2 py-1 rounded-full w-max mb-3">Siêu
-                        Bền Bỉ, Tiết Kiệm</div>
-                    <img src="Mới nhất.png" alt="DHV12I"
-                        class="w-full h-32 object-contain mb-3 relative z-10 hover:scale-105 transition-transform"
-                        onclick="openLightbox(this.src)">
-                    <h3 class="text-base font-bold text-midnight mb-1">Điều hòa một chiều Livotec DHV12I Inverter</h3>
-                    <!-- Rating 5 sao -->
-                    <div class="flex items-center gap-0.5 text-yellow-400 mb-2">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                    </div>
-                    <p class="text-[10px] text-midnight/60 mb-3 font-medium">12.000 BTU - Làm mát siêu tốc</p>
-                    <div class="text-lg font-black text-teal mb-4 mt-auto">10.490.000₫</div>
-                    <!-- Links Hướng dẫn -->
-                    <div class="flex flex-col gap-1.5 mb-4 border-t border-warmgrey/30 pt-3">
-                        <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="file-text" class="w-3 h-3"></i> Xem hướng dẫn sử dụng
-                        </a>
-                        <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="shield-alert" class="w-3 h-3"></i> Xem hướng dẫn bảo quản
-                        </a>
-                    </div>
 
-                    <div class="space-y-2 relative z-20 mt-auto">
-                        <button onclick="openModal('prod-dhv12i')"
-                            class="w-full bg-white border border-warmgrey/50 text-midnight py-2.5 rounded-xl font-bold text-[11px] hover:bg-skyblue transition shadow-sm">Xem
-                            thông số</button>
-                        <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dhv12i-inverter.html" target="_blank"
-                            class="w-full flex justify-center items-center bg-white border border-red-500 text-red-500 py-2.5 rounded-xl font-bold text-[11px] hover:bg-red-50 transition shadow-sm">
-                            Tôi muốn mua
-                        </a>
-                    </div>
-                </div>
+        .acf-step {
+            transition: all 0.3s ease;
+        }
 
-                <!-- Product 4: DHV09I -->
-                <div
-                    class="snap-center shrink-0 w-[80vw] md:w-[280px] bg-beige/30 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-warmgrey/30 flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-skyblue/20 rounded-bl-full -z-10"></div>
-                    <div class="bg-skyblue text-midnight text-[9px] font-bold px-2 py-1 rounded-full w-max mb-3">Siêu
-                        Bền Bỉ, Tiết Kiệm</div>
-                    <img src="Mới nhất.png" alt="DHV09I"
-                        class="w-full h-32 object-contain mb-3 relative z-10 hover:scale-105 transition-transform"
-                        onclick="openLightbox(this.src)">
-                    <h3 class="text-base font-bold text-midnight mb-1">Điều hòa một chiều Livotec DHV09I Inverter</h3>
-                    <!-- Rating 5 sao -->
-                    <div class="flex items-center gap-0.5 text-yellow-400 mb-2">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                    </div>
-                    <p class="text-[10px] text-midnight/60 mb-3 font-medium">9.000 BTU - Làm mát siêu tốc</p>
-                    <div class="text-lg font-black text-teal mb-4 mt-auto">9.440.000</div>
-                    <!-- Links Hướng dẫn -->
-                    <div class="flex flex-col gap-1.5 mb-4 border-t border-warmgrey/30 pt-3">
-                        <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="file-text" class="w-3 h-3"></i> Xem hướng dẫn sử dụng
-                        </a>
-                        <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="shield-alert" class="w-3 h-3"></i> Xem hướng dẫn bảo quản
-                        </a>
-                    </div>
 
-                    <div class="space-y-2 relative z-20 mt-auto">
-                        <button onclick="openModal('prod-dhv09i')"
-                            class="w-full bg-white border border-warmgrey/50 text-midnight py-2.5 rounded-xl font-bold text-[11px] hover:bg-skyblue transition shadow-sm">Xem
-                            thông số</button>
-                        <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dhv09i-inverter.html" target="_blank"
-                            class="w-full flex justify-center items-center bg-white border border-red-500 text-red-500 py-2.5 rounded-xl font-bold text-[11px] hover:bg-red-50 transition shadow-sm">
-                            Tôi muốn mua
-                        </a>
-                    </div>
-                </div>
+        /* Progress line animation */
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-100%);
+                width: 40%;
+            }
 
-                <!-- Product 5: DH24 -->
-                <div
-                    class="snap-center shrink-0 w-[80vw] md:w-[280px] bg-beige/30 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-warmgrey/30 flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-blush/20 rounded-bl-full -z-10"></div>
-                    <div class="bg-blush text-midnight text-[9px] font-bold px-2 py-1 rounded-full w-max mb-3">Dòng Cao
-                        Cấp (Smart-Feel)</div>
-                    <img src="ảnh điều hòa1.webp" alt="DH24"
-                        class="w-full h-32 object-contain mb-3 relative z-10 hover:scale-105 transition-transform"
-                        onclick="openLightbox(this.src)">
-                    <h3 class="text-base font-bold text-midnight mb-1">Điều hòa Livotec DH24 Inverter</h3>
-                    <!-- Rating 5 sao -->
-                    <div class="flex items-center gap-0.5 text-yellow-400 mb-2">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                    </div>
-                    <p class="text-[10px] text-midnight/60 mb-3 font-medium">24.000 BTU - Siêu công suất</p>
-                    <div class="text-lg font-black text-teal mb-4 mt-auto">20.990.000₫</div>
-                    <!-- Links Hướng dẫn -->
-                    <div class="flex flex-col gap-1.5 mb-4 border-t border-warmgrey/30 pt-3">
-                        <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="file-text" class="w-3 h-3"></i> Xem hướng dẫn sử dụng
-                        </a>
-                        <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="shield-alert" class="w-3 h-3"></i> Xem hướng dẫn bảo quản
-                        </a>
-                    </div>
 
-                    <div class="space-y-2 relative z-20 mt-auto">
-                        <button onclick="openModal('prod-dh24')"
-                            class="w-full bg-white border border-warmgrey/50 text-midnight py-2.5 rounded-xl font-bold text-[11px] hover:bg-blush transition shadow-sm">Xem
-                            thông số</button>
-                        <a href="https://livotec.com/dieu-hoa-livotec-dh24-inverter.html" target="_blank"
-                            class="w-full flex justify-center items-center bg-white border border-red-500 text-red-500 py-2.5 rounded-xl font-bold text-[11px] hover:bg-red-50 transition shadow-sm">
-                            Tôi muốn mua
-                        </a>
-                    </div>
-                </div>
+            50% {
+                width: 60%;
+            }
 
-                <!-- Product 6: DH18 -->
-                <div
-                    class="snap-center shrink-0 w-[80vw] md:w-[280px] bg-beige/30 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-warmgrey/30 flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-blush/20 rounded-bl-full -z-10"></div>
-                    <div class="bg-blush text-midnight text-[9px] font-bold px-2 py-1 rounded-full w-max mb-3">Dòng Cao
-                        Cấp (Smart-Feel)</div>
-                    <img src="ảnh điều hòa1.webp" alt="DH18"
-                        class="w-full h-32 object-contain mb-3 relative z-10 hover:scale-105 transition-transform"
-                        onclick="openLightbox(this.src)">
-                    <h3 class="text-base font-bold text-midnight mb-1">Điều hòa Livotec DH18 Inverter</h3>
-                    <!-- Rating 5 sao -->
-                    <div class="flex items-center gap-0.5 text-yellow-400 mb-2">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                    </div>
-                    <p class="text-[10px] text-midnight/60 mb-3 font-medium">18.000 BTU - Phù hợp phòng lớn</p>
-                    <div class="text-lg font-black text-teal mb-4 mt-auto">16.990.000₫</div>
-                    <!-- Links Hướng dẫn -->
-                    <div class="flex flex-col gap-1.5 mb-4 border-t border-warmgrey/30 pt-3">
-                        <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="file-text" class="w-3 h-3"></i> Xem hướng dẫn sử dụng
-                        </a>
-                        <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="shield-alert" class="w-3 h-3"></i> Xem hướng dẫn bảo quản
-                        </a>
-                    </div>
 
-                    <div class="space-y-2 relative z-20 mt-auto">
-                        <button onclick="openModal('prod-dh18')"
-                            class="w-full bg-white border border-warmgrey/50 text-midnight py-2.5 rounded-xl font-bold text-[11px] hover:bg-blush transition shadow-sm">Xem
-                            thông số</button>
-                        <a href="https://livotec.com/dieu-hoa-livotec-dh18-inverter.html" target="_blank"
-                            class="w-full flex justify-center items-center bg-white border border-red-500 text-red-500 py-2.5 rounded-xl font-bold text-[11px] hover:bg-red-50 transition shadow-sm">
-                            Tôi muốn mua
-                        </a>
-                    </div>
-                </div>
+            100% {
+                transform: translateX(350%);
+                width: 40%;
+            }
+        }
+    </style>
 
-                <!-- Product 7: DH12 -->
-                <div
-                    class="snap-center shrink-0 w-[80vw] md:w-[280px] bg-beige/30 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-warmgrey/30 flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-skyblue/20 rounded-bl-full -z-10"></div>
-                    <div class="bg-skyblue text-midnight text-[9px] font-bold px-2 py-1 rounded-full w-max mb-3">Siêu
-                        Bền Bỉ, Tiết Kiệm</div>
-                    <img src="ảnh điều hòa1.webp" alt="DH12"
-                        class="w-full h-32 object-contain mb-3 relative z-10 hover:scale-105 transition-transform"
-                        onclick="openLightbox(this.src)">
-                    <h3 class="text-base font-bold text-midnight mb-1">Điều hòa một chiều Livotec DH12 Inverter</h3>
-                    <!-- Rating 5 sao -->
-                    <div class="flex items-center gap-0.5 text-yellow-400 mb-2">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                    </div>
-                    <p class="text-[10px] text-midnight/60 mb-3 font-medium">12.000 BTU - Tiêu chuẩn</p>
-                    <div class="text-lg font-black text-teal mb-4 mt-auto">9.990.000₫</div>
-                    <!-- Links Hướng dẫn -->
-                    <div class="flex flex-col gap-1.5 mb-4 border-t border-warmgrey/30 pt-3">
-                        <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="file-text" class="w-3 h-3"></i> Xem hướng dẫn sử dụng
-                        </a>
-                        <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="shield-alert" class="w-3 h-3"></i> Xem hướng dẫn bảo quản
-                        </a>
-                    </div>
+    <!-- SECTION 5: PRODUCTS (Carousel with 8 items) — UPGRADED UI/UX -->
+    <section id="sec-products"
+        class="py-2 md:py-3 bg-white relative overflow-hidden flex flex-col justify-start h-screen min-h-[580px] scroll-mt-[80px] pt-[80px]">
 
-                    <div class="space-y-2 relative z-20 mt-auto">
-                        <button onclick="openModal('prod-dh12')"
-                            class="w-full bg-white border border-warmgrey/50 text-midnight py-2.5 rounded-xl font-bold text-[11px] hover:bg-skyblue transition shadow-sm">Xem
-                            thông số</button>
-                        <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dh12-inverter.html" target="_blank"
-                            class="w-full flex justify-center items-center bg-white border border-red-500 text-red-500 py-2.5 rounded-xl font-bold text-[11px] hover:bg-red-50 transition shadow-sm">
-                            Tôi muốn mua
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 8: DH09 -->
-                <div
-                    class="snap-center shrink-0 w-[80vw] md:w-[280px] bg-beige/30 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-warmgrey/30 flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-skyblue/20 rounded-bl-full -z-10"></div>
-                    <div class="bg-skyblue text-midnight text-[9px] font-bold px-2 py-1 rounded-full w-max mb-3">Siêu
-                        Bền Bỉ, Tiết Kiệm</div>
-                    <img src="ảnh điều hòa1.webp" alt="DH09"
-                        class="w-full h-32 object-contain mb-3 relative z-10 hover:scale-105 transition-transform"
-                        onclick="openLightbox(this.src)">
-                    <h3 class="text-base font-bold text-midnight mb-1">Điều hòa một chiều Livotec DH09 Inverter</h3>
-                    <!-- Rating 5 sao -->
-                    <div class="flex items-center gap-0.5 text-yellow-400 mb-2">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i>
-                    </div>
-                    <p class="text-[10px] text-midnight/60 mb-3 font-medium">9.000 BTU - Siêu tiết kiệm</p>
-                    <div class="text-lg font-black text-teal mb-4 mt-auto">8.990.000₫</div>
-                    <!-- Links Hướng dẫn -->
-                    <div class="flex flex-col gap-1.5 mb-4 border-t border-warmgrey/30 pt-3">
-                        <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="file-text" class="w-3 h-3"></i> Xem hướng dẫn sử dụng
-                        </a>
-                        <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
-                            target="_blank"
-                            class="inline-flex items-center gap-1.5 text-[10px] text-midnight/70 hover:text-teal font-medium">
-                            <i data-lucide="shield-alert" class="w-3 h-3"></i> Xem hướng dẫn bảo quản
-                        </a>
-                    </div>
-
-                    <div class="space-y-2 relative z-20 mt-auto">
-                        <button onclick="openModal('prod-dh09')"
-                            class="w-full bg-white border border-warmgrey/50 text-midnight py-2.5 rounded-xl font-bold text-[11px] hover:bg-skyblue transition shadow-sm">Xem
-                            thông số</button>
-                        <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dh09-inverter.html" target="_blank"
-                            class="w-full flex justify-center items-center bg-white border border-red-500 text-red-500 py-2.5 rounded-xl font-bold text-[11px] hover:bg-red-50 transition shadow-sm">
-                            Tôi muốn mua
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Scroll instructions & Controls -->
-            <div class="flex items-center justify-center gap-3 mt-4 text-midnight/60">
-                <button onclick="scrollCarousel(-1)"
-                    class="p-1.5 bg-white border border-warmgrey/50 rounded-full shadow-sm hover:bg-blush hover:text-midnight transition transform hover:scale-110">
-                    <i data-lucide="chevron-left" class="w-3 h-3"></i>
-                </button>
-                <span class="text-[10px] font-semibold px-2">Vuốt ngang để xem thêm</span>
-                <button onclick="scrollCarousel(1)"
-                    class="p-1.5 bg-white border border-warmgrey/50 rounded-full shadow-sm hover:bg-blush hover:text-midnight transition transform hover:scale-110">
-                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
-                </button>
-            </div>
-
+        <!-- Subtle background pattern -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style="background-image: radial-gradient(circle at 1px 1px, #1a1a2e 1px, transparent 0); background-size: 40px 40px;">
         </div>
 
-        <div class="flex justify-center mt-8 relative z-20 w-full">
-            <a href="#sec-warranty"
-                class="bg-midnight text-white px-6 py-2.5 rounded-full shadow-md text-[10px] font-bold tracking-wide hover:bg-blush hover:text-midnight transition z-20 group flex items-center gap-1.5">
-                Khám phá chính sách bảo hành <i data-lucide="arrow-down"
-                    class="w-3 h-3 group-hover:translate-y-1 transition"></i>
+        <!-- Decorative gradient blobs -->
+        <div
+            class="absolute -top-20 -right-20 w-[400px] h-[400px] bg-gradient-to-br from-[#00b9ad]/10 to-transparent rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div
+            class="absolute -bottom-20 -left-20 w-[350px] h-[350px] bg-gradient-to-tr from-[#D80088]/8 to-transparent rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 max-w-screen-xl flex flex-col justify-start">
+
+            <!-- Heading with animated underline -->
+            <div class="text-center mb-2 md:mb-3 py-3 product-heading">
+                <h2 class="text-2xl md:text-4xl font-extrabold leading-tight">
+                    <span class="block text-[#00b9ad] product-title-line">CHỌN ĐIỀU HÒA LIVOTEC</span>
+                    <span class="block text-[#D80088] mt-2 product-title-line">CHO GIA ĐÌNH BẠN</span>
+                </h2>
+                <!-- Animated underline -->
+                <div class="flex justify-center mt-2">
+                    <div
+                        class="h-[3px] w-0 bg-gradient-to-r from-[#00b9ad] via-[#D80088] to-[#00b9ad] rounded-full product-underline">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Carousel -->
+            <div class="relative group/carousel">
+
+                <!-- Gradient fade edges -->
+                <div
+                    class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none rounded-l-2xl">
+                </div>
+                <div
+                    class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none rounded-r-2xl">
+                </div>
+
+                <!-- Nav buttons (appear on hover of carousel area) -->
+                <button onclick="scrollCarousel(-1)" class="absolute left-1 top-1/2 -translate-y-1/2 z-20
+                           w-9 h-9 bg-white/90 backdrop-blur-md border border-warmgrey/20 rounded-full shadow-lg
+                           flex items-center justify-center
+                           opacity-0 group-hover/carousel:opacity-100
+                           hover:bg-[#00b9ad] hover:text-white hover:scale-110 hover:shadow-xl
+                           transition-all duration-300 text-midnight">
+                    <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                </button>
+                <button onclick="scrollCarousel(1)" class="absolute right-1 top-1/2 -translate-y-1/2 z-20
+                           w-9 h-9 bg-white/90 backdrop-blur-md border border-warmgrey/20 rounded-full shadow-lg
+                           flex items-center justify-center
+                           opacity-0 group-hover/carousel:opacity-100
+                           hover:bg-[#00b9ad] hover:text-white hover:scale-110 hover:shadow-xl
+                           transition-all duration-300 text-midnight">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+
+                <div id="product-carousel"
+                    class="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-2 no-scrollbar scroll-smooth w-full px-2">
+
+                    <!-- Product 1: DHV12J -->
+                    <div class="product-card snap-center shrink-0 w-[70vw] md:w-[240px] bg-gradient-to-b from-white to-beige/40 rounded-[1.5rem] p-3 shadow-sm
+                                border border-warmgrey/20 flex flex-col relative overflow-hidden
+                                hover:shadow-xl hover:-translate-y-2 hover:border-[#00b9ad]/30
+                                transition-all duration-400 group">
+                        <!-- Animated corner accent -->
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blush/25 to-transparent rounded-bl-[2rem] -z-10
+                                    group-hover:w-24 group-hover:h-24 transition-all duration-500"></div>
+                        <!-- Shine effect on hover -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -z-5
+                                    translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out">
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-blush to-[#ff6bb3] text-white text-[9px] font-bold px-2.5 py-1 rounded-full w-max mb-2 shadow-sm">
+                            Dòng Cao Cấp (Smart-Feel)
+                        </div>
+                        <img src="Mới nhất.png" alt="DHV12J" class="w-full h-20 object-contain mb-1 relative z-10 cursor-pointer
+                                   group-hover:scale-110 transition-transform duration-500"
+                            onclick="openLightbox(this.src)"
+                            onerror="this.src='https://livotec.com/wp-content/uploads/2024/05/DHV12J.png'">
+                        <h3 class="text-[13px] font-bold text-midnight mb-0.5 leading-snug">Điều hòa một chiều Livotec
+                            DHV12J Inverter</h3>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 text-yellow-400 mb-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <span class="text-[9px] text-midnight/50 ml-1 font-medium">5.0</span>
+                        </div>
+
+                        <p class="text-[10px] text-midnight/60 mb-1.5 font-medium">12.000 BTU · Phù hợp 15-20m²</p>
+
+                        <!-- Price with highlight -->
+                        <div class="flex items-baseline gap-1.5 mb-1.5 mt-auto">
+                            <span class="text-base font-black text-teal">11.990.000₫</span>
+                        </div>
+
+                        <!-- Links -->
+                        <div class="flex flex-col gap-0.5 mb-1.5 border-t border-warmgrey/20 pt-1.5">
+                            <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="file-text" class="w-3 h-3"></i> Hướng dẫn sử dụng
+                            </a>
+                            <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="shield-alert" class="w-3 h-3"></i> Hướng dẫn bảo quản
+                            </a>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="space-y-1.5 relative z-20 mt-auto">
+                            <button onclick="openModal('prod-dhv12j')" class="w-full bg-white border border-warmgrey/40 text-midnight py-2 rounded-xl font-bold text-[11px]
+                                       hover:bg-gradient-to-r hover:from-blush/20 hover:to-blush/5 hover:border-blush/50
+                                       transition-all duration-300 shadow-sm">
+                                Xem thông số
+                            </button>
+                            <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dhv12j-inverter.html"
+                                target="_blank" class="w-full flex justify-center items-center gap-1
+                                       bg-gradient-to-r from-red-500 to-[#D80088] text-white py-2 rounded-xl font-bold text-[11px]
+                                       hover:shadow-lg hover:scale-[1.02]
+                                       transition-all duration-300 shadow-sm">
+                                <i data-lucide="shopping-cart" class="w-3 h-3"></i> Tôi muốn mua
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Product 2: DHV09J -->
+                    <div class="product-card snap-center shrink-0 w-[70vw] md:w-[240px] bg-gradient-to-b from-white to-beige/40 rounded-[1.5rem] p-3 shadow-sm
+                                border border-warmgrey/20 flex flex-col relative overflow-hidden
+                                hover:shadow-xl hover:-translate-y-2 hover:border-[#00b9ad]/30
+                                transition-all duration-400 group">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blush/25 to-transparent rounded-bl-[2rem] -z-10
+                                    group-hover:w-24 group-hover:h-24 transition-all duration-500"></div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -z-5
+                                    translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out">
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-blush to-[#ff6bb3] text-white text-[9px] font-bold px-2.5 py-1 rounded-full w-max mb-2 shadow-sm">
+                            Dòng Cao Cấp (Smart-Feel)
+                        </div>
+                        <img src="Mới nhất.png" alt="DHV09J" class="w-full h-20 object-contain mb-1 relative z-10 cursor-pointer
+                                   group-hover:scale-110 transition-transform duration-500"
+                            onclick="openLightbox(this.src)"
+                            onerror="this.src='https://livotec.com/wp-content/uploads/2024/05/DHV09J.png'">
+                        <h3 class="text-[13px] font-bold text-midnight mb-0.5 leading-snug">Điều hòa một chiều Livotec
+                            DHV09J Inverter</h3>
+                        <div class="flex items-center gap-0.5 text-yellow-400 mb-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <span class="text-[9px] text-midnight/50 ml-1 font-medium">5.0</span>
+                        </div>
+                        <p class="text-[10px] text-midnight/60 mb-1.5 font-medium">9.000 BTU · Phù hợp &lt; 15m²</p>
+                        <div class="flex items-baseline gap-1.5 mb-1.5 mt-auto">
+                            <span class="text-base font-black text-teal">10.790.000₫</span>
+                        </div>
+                        <div class="flex flex-col gap-0.5 mb-1.5 border-t border-warmgrey/20 pt-1.5">
+                            <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="file-text" class="w-3 h-3"></i> Hướng dẫn sử dụng
+                            </a>
+                            <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="shield-alert" class="w-3 h-3"></i> Hướng dẫn bảo quản
+                            </a>
+                        </div>
+                        <div class="space-y-1.5 relative z-20 mt-auto">
+                            <button onclick="openModal('prod-dhv09j')"
+                                class="w-full bg-white border border-warmgrey/40 text-midnight py-2 rounded-xl font-bold text-[11px]
+                                       hover:bg-gradient-to-r hover:from-blush/20 hover:to-blush/5 hover:border-blush/50 transition-all duration-300 shadow-sm">
+                                Xem thông số</button>
+                            <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dhv09j-inverter.html"
+                                target="_blank" class="w-full flex justify-center items-center gap-1
+                                       bg-gradient-to-r from-red-500 to-[#D80088] text-white py-2 rounded-xl font-bold text-[11px]
+                                       hover:shadow-lg hover:scale-[1.02] transition-all duration-300 shadow-sm">
+                                <i data-lucide="shopping-cart" class="w-3 h-3"></i> Tôi muốn mua
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Product 3: DHV12I -->
+                    <div class="product-card snap-center shrink-0 w-[70vw] md:w-[240px] bg-gradient-to-b from-white to-beige/40 rounded-[1.5rem] p-3 shadow-sm
+                                border border-warmgrey/20 flex flex-col relative overflow-hidden
+                                hover:shadow-xl hover:-translate-y-2 hover:border-[#00b9ad]/30
+                                transition-all duration-400 group">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-skyblue/25 to-transparent rounded-bl-[2rem] -z-10
+                                    group-hover:w-24 group-hover:h-24 transition-all duration-500"></div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -z-5
+                                    translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out">
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-skyblue to-[#00b9ad] text-white text-[9px] font-bold px-2.5 py-1 rounded-full w-max mb-2 shadow-sm">
+                            Siêu Bền Bỉ, Tiết Kiệm
+                        </div>
+                        <img src="Mới nhất.png" alt="DHV12I" class="w-full h-20 object-contain mb-1 relative z-10 cursor-pointer
+                                   group-hover:scale-110 transition-transform duration-500"
+                            onclick="openLightbox(this.src)">
+                        <h3 class="text-[13px] font-bold text-midnight mb-0.5 leading-snug">Điều hòa một chiều Livotec
+                            DHV12I Inverter</h3>
+                        <div class="flex items-center gap-0.5 text-yellow-400 mb-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <span class="text-[9px] text-midnight/50 ml-1 font-medium">5.0</span>
+                        </div>
+                        <p class="text-[10px] text-midnight/60 mb-1.5 font-medium">12.000 BTU · Làm mát siêu tốc</p>
+                        <div class="flex items-baseline gap-1.5 mb-1.5 mt-auto">
+                            <span class="text-base font-black text-teal">10.490.000₫</span>
+                        </div>
+                        <div class="flex flex-col gap-0.5 mb-1.5 border-t border-warmgrey/20 pt-1.5">
+                            <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="file-text" class="w-3 h-3"></i> Hướng dẫn sử dụng
+                            </a>
+                            <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="shield-alert" class="w-3 h-3"></i> Hướng dẫn bảo quản
+                            </a>
+                        </div>
+                        <div class="space-y-1.5 relative z-20 mt-auto">
+                            <button onclick="openModal('prod-dhv12i')"
+                                class="w-full bg-white border border-warmgrey/40 text-midnight py-2 rounded-xl font-bold text-[11px]
+                                       hover:bg-gradient-to-r hover:from-skyblue/20 hover:to-skyblue/5 hover:border-skyblue/50 transition-all duration-300 shadow-sm">
+                                Xem thông số</button>
+                            <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dhv12i-inverter.html"
+                                target="_blank" class="w-full flex justify-center items-center gap-1
+                                       bg-gradient-to-r from-red-500 to-[#D80088] text-white py-2 rounded-xl font-bold text-[11px]
+                                       hover:shadow-lg hover:scale-[1.02] transition-all duration-300 shadow-sm">
+                                <i data-lucide="shopping-cart" class="w-3 h-3"></i> Tôi muốn mua
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Product 4: DHV09I -->
+                    <div class="product-card snap-center shrink-0 w-[70vw] md:w-[240px] bg-gradient-to-b from-white to-beige/40 rounded-[1.5rem] p-3 shadow-sm
+                                border border-warmgrey/20 flex flex-col relative overflow-hidden
+                                hover:shadow-xl hover:-translate-y-2 hover:border-[#00b9ad]/30
+                                transition-all duration-400 group">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-skyblue/25 to-transparent rounded-bl-[2rem] -z-10
+                                    group-hover:w-24 group-hover:h-24 transition-all duration-500"></div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -z-5
+                                    translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out">
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-skyblue to-[#00b9ad] text-white text-[9px] font-bold px-2.5 py-1 rounded-full w-max mb-2 shadow-sm">
+                            Siêu Bền Bỉ, Tiết Kiệm
+                        </div>
+                        <img src="Mới nhất.png" alt="DHV09I" class="w-full h-20 object-contain mb-1 relative z-10 cursor-pointer
+                                   group-hover:scale-110 transition-transform duration-500"
+                            onclick="openLightbox(this.src)">
+                        <h3 class="text-[13px] font-bold text-midnight mb-0.5 leading-snug">Điều hòa một chiều Livotec
+                            DHV09I Inverter</h3>
+                        <div class="flex items-center gap-0.5 text-yellow-400 mb-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <span class="text-[9px] text-midnight/50 ml-1 font-medium">5.0</span>
+                        </div>
+                        <p class="text-[10px] text-midnight/60 mb-1.5 font-medium">9.000 BTU · Làm mát siêu tốc</p>
+                        <div class="flex items-baseline gap-1.5 mb-1.5 mt-auto">
+                            <span class="text-base font-black text-teal">9.440.000đ</span>
+                        </div>
+                        <div class="flex flex-col gap-0.5 mb-1.5 border-t border-warmgrey/20 pt-1.5">
+                            <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="file-text" class="w-3 h-3"></i> Hướng dẫn sử dụng
+                            </a>
+                            <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="shield-alert" class="w-3 h-3"></i> Hướng dẫn bảo quản
+                            </a>
+                        </div>
+                        <div class="space-y-1.5 relative z-20 mt-auto">
+                            <button onclick="openModal('prod-dhv09i')"
+                                class="w-full bg-white border border-warmgrey/40 text-midnight py-2 rounded-xl font-bold text-[11px]
+                                       hover:bg-gradient-to-r hover:from-skyblue/20 hover:to-skyblue/5 hover:border-skyblue/50 transition-all duration-300 shadow-sm">
+                                Xem thông số</button>
+                            <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dhv09i-inverter.html"
+                                target="_blank" class="w-full flex justify-center items-center gap-1
+                                       bg-gradient-to-r from-red-500 to-[#D80088] text-white py-2 rounded-xl font-bold text-[11px]
+                                       hover:shadow-lg hover:scale-[1.02] transition-all duration-300 shadow-sm">
+                                <i data-lucide="shopping-cart" class="w-3 h-3"></i> Tôi muốn mua
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Product 5: DH24 -->
+                    <div class="product-card snap-center shrink-0 w-[70vw] md:w-[240px] bg-gradient-to-b from-white to-beige/40 rounded-[1.5rem] p-3 shadow-sm
+                                border border-warmgrey/20 flex flex-col relative overflow-hidden
+                                hover:shadow-xl hover:-translate-y-2 hover:border-[#00b9ad]/30
+                                transition-all duration-400 group">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blush/25 to-transparent rounded-bl-[2rem] -z-10
+                                    group-hover:w-24 group-hover:h-24 transition-all duration-500"></div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -z-5
+                                    translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out">
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-blush to-[#ff6bb3] text-white text-[9px] font-bold px-2.5 py-1 rounded-full w-max mb-2 shadow-sm">
+                            Dòng Cao Cấp (Smart-Feel)
+                        </div>
+                        <img src="ảnh điều hòa1.webp" alt="DH24" class="w-full h-20 object-contain mb-1 relative z-10 cursor-pointer
+                                   group-hover:scale-110 transition-transform duration-500"
+                            onclick="openLightbox(this.src)">
+                        <h3 class="text-[13px] font-bold text-midnight mb-0.5 leading-snug">Điều hòa Livotec DH24
+                            Inverter</h3>
+                        <div class="flex items-center gap-0.5 text-yellow-400 mb-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <span class="text-[9px] text-midnight/50 ml-1 font-medium">5.0</span>
+                        </div>
+                        <p class="text-[10px] text-midnight/60 mb-1.5 font-medium">24.000 BTU · Siêu công suất</p>
+                        <div class="flex items-baseline gap-1.5 mb-1.5 mt-auto">
+                            <span class="text-base font-black text-teal">20.990.000₫</span>
+                        </div>
+                        <div class="flex flex-col gap-0.5 mb-1.5 border-t border-warmgrey/20 pt-1.5">
+                            <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="file-text" class="w-3 h-3"></i> Hướng dẫn sử dụng
+                            </a>
+                            <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="shield-alert" class="w-3 h-3"></i> Hướng dẫn bảo quản
+                            </a>
+                        </div>
+                        <div class="space-y-1.5 relative z-20 mt-auto">
+                            <button onclick="openModal('prod-dh24')"
+                                class="w-full bg-white border border-warmgrey/40 text-midnight py-2 rounded-xl font-bold text-[11px]
+                                       hover:bg-gradient-to-r hover:from-blush/20 hover:to-blush/5 hover:border-blush/50 transition-all duration-300 shadow-sm">
+                                Xem thông số</button>
+                            <a href="https://livotec.com/dieu-hoa-livotec-dh24-inverter.html" target="_blank" class="w-full flex justify-center items-center gap-1
+                                       bg-gradient-to-r from-red-500 to-[#D80088] text-white py-2 rounded-xl font-bold text-[11px]
+                                       hover:shadow-lg hover:scale-[1.02] transition-all duration-300 shadow-sm">
+                                <i data-lucide="shopping-cart" class="w-3 h-3"></i> Tôi muốn mua
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Product 6: DH18 -->
+                    <div class="product-card snap-center shrink-0 w-[70vw] md:w-[240px] bg-gradient-to-b from-white to-beige/40 rounded-[1.5rem] p-3 shadow-sm
+                                border border-warmgrey/20 flex flex-col relative overflow-hidden
+                                hover:shadow-xl hover:-translate-y-2 hover:border-[#00b9ad]/30
+                                transition-all duration-400 group">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blush/25 to-transparent rounded-bl-[2rem] -z-10
+                                    group-hover:w-24 group-hover:h-24 transition-all duration-500"></div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -z-5
+                                    translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out">
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-blush to-[#ff6bb3] text-white text-[9px] font-bold px-2.5 py-1 rounded-full w-max mb-2 shadow-sm">
+                            Dòng Cao Cấp (Smart-Feel)
+                        </div>
+                        <img src="ảnh điều hòa1.webp" alt="DH18" class="w-full h-20 object-contain mb-1 relative z-10 cursor-pointer
+                                   group-hover:scale-110 transition-transform duration-500"
+                            onclick="openLightbox(this.src)">
+                        <h3 class="text-[13px] font-bold text-midnight mb-0.5 leading-snug">Điều hòa Livotec DH18
+                            Inverter</h3>
+                        <div class="flex items-center gap-0.5 text-yellow-400 mb-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <span class="text-[9px] text-midnight/50 ml-1 font-medium">5.0</span>
+                        </div>
+                        <p class="text-[10px] text-midnight/60 mb-1.5 font-medium">18.000 BTU · Phù hợp phòng lớn</p>
+                        <div class="flex items-baseline gap-1.5 mb-1.5 mt-auto">
+                            <span class="text-base font-black text-teal">16.990.000₫</span>
+                        </div>
+                        <div class="flex flex-col gap-0.5 mb-1.5 border-t border-warmgrey/20 pt-1.5">
+                            <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="file-text" class="w-3 h-3"></i> Hướng dẫn sử dụng
+                            </a>
+                            <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="shield-alert" class="w-3 h-3"></i> Hướng dẫn bảo quản
+                            </a>
+                        </div>
+                        <div class="space-y-1.5 relative z-20 mt-auto">
+                            <button onclick="openModal('prod-dh18')"
+                                class="w-full bg-white border border-warmgrey/40 text-midnight py-2 rounded-xl font-bold text-[11px]
+                                       hover:bg-gradient-to-r hover:from-blush/20 hover:to-blush/5 hover:border-blush/50 transition-all duration-300 shadow-sm">
+                                Xem thông số</button>
+                            <a href="https://livotec.com/dieu-hoa-livotec-dh18-inverter.html" target="_blank" class="w-full flex justify-center items-center gap-1
+                                       bg-gradient-to-r from-red-500 to-[#D80088] text-white py-2 rounded-xl font-bold text-[11px]
+                                       hover:shadow-lg hover:scale-[1.02] transition-all duration-300 shadow-sm">
+                                <i data-lucide="shopping-cart" class="w-3 h-3"></i> Tôi muốn mua
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Product 7: DH12 -->
+                    <div class="product-card snap-center shrink-0 w-[70vw] md:w-[240px] bg-gradient-to-b from-white to-beige/40 rounded-[1.5rem] p-3 shadow-sm
+                                border border-warmgrey/20 flex flex-col relative overflow-hidden
+                                hover:shadow-xl hover:-translate-y-2 hover:border-[#00b9ad]/30
+                                transition-all duration-400 group">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-skyblue/25 to-transparent rounded-bl-[2rem] -z-10
+                                    group-hover:w-24 group-hover:h-24 transition-all duration-500"></div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -z-5
+                                    translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out">
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-skyblue to-[#00b9ad] text-white text-[9px] font-bold px-2.5 py-1 rounded-full w-max mb-2 shadow-sm">
+                            Siêu Bền Bỉ, Tiết Kiệm
+                        </div>
+                        <img src="ảnh điều hòa1.webp" alt="DH12" class="w-full h-20 object-contain mb-1 relative z-10 cursor-pointer
+                                   group-hover:scale-110 transition-transform duration-500"
+                            onclick="openLightbox(this.src)">
+                        <h3 class="text-[13px] font-bold text-midnight mb-0.5 leading-snug">Điều hòa một chiều Livotec
+                            DH12 Inverter</h3>
+                        <div class="flex items-center gap-0.5 text-yellow-400 mb-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <span class="text-[9px] text-midnight/50 ml-1 font-medium">5.0</span>
+                        </div>
+                        <p class="text-[10px] text-midnight/60 mb-1.5 font-medium">12.000 BTU · Tiêu chuẩn</p>
+                        <div class="flex items-baseline gap-1.5 mb-1.5 mt-auto">
+                            <span class="text-base font-black text-teal">9.990.000₫</span>
+                        </div>
+                        <div class="flex flex-col gap-0.5 mb-1.5 border-t border-warmgrey/20 pt-1.5">
+                            <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="file-text" class="w-3 h-3"></i> Hướng dẫn sử dụng
+                            </a>
+                            <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="shield-alert" class="w-3 h-3"></i> Hướng dẫn bảo quản
+                            </a>
+                        </div>
+                        <div class="space-y-1.5 relative z-20 mt-auto">
+                            <button onclick="openModal('prod-dh12')"
+                                class="w-full bg-white border border-warmgrey/40 text-midnight py-2 rounded-xl font-bold text-[11px]
+                                       hover:bg-gradient-to-r hover:from-skyblue/20 hover:to-skyblue/5 hover:border-skyblue/50 transition-all duration-300 shadow-sm">
+                                Xem thông số</button>
+                            <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dh12-inverter.html" target="_blank"
+                                class="w-full flex justify-center items-center gap-1
+                                       bg-gradient-to-r from-red-500 to-[#D80088] text-white py-2 rounded-xl font-bold text-[11px]
+                                       hover:shadow-lg hover:scale-[1.02] transition-all duration-300 shadow-sm">
+                                <i data-lucide="shopping-cart" class="w-3 h-3"></i> Tôi muốn mua
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Product 8: DH09 -->
+                    <div class="product-card snap-center shrink-0 w-[70vw] md:w-[240px] bg-gradient-to-b from-white to-beige/40 rounded-[1.5rem] p-3 shadow-sm
+                                border border-warmgrey/20 flex flex-col relative overflow-hidden
+                                hover:shadow-xl hover:-translate-y-2 hover:border-[#00b9ad]/30
+                                transition-all duration-400 group">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-skyblue/25 to-transparent rounded-bl-[2rem] -z-10
+                                    group-hover:w-24 group-hover:h-24 transition-all duration-500"></div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -z-5
+                                    translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out">
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-skyblue to-[#00b9ad] text-white text-[9px] font-bold px-2.5 py-1 rounded-full w-max mb-2 shadow-sm">
+                            Siêu Bền Bỉ, Tiết Kiệm
+                        </div>
+                        <img src="ảnh điều hòa1.webp" alt="DH09" class="w-full h-20 object-contain mb-1 relative z-10 cursor-pointer
+                                   group-hover:scale-110 transition-transform duration-500"
+                            onclick="openLightbox(this.src)">
+                        <h3 class="text-[13px] font-bold text-midnight mb-0.5 leading-snug">Điều hòa một chiều Livotec
+                            DH09 Inverter</h3>
+                        <div class="flex items-center gap-0.5 text-yellow-400 mb-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400"></i>
+                            <span class="text-[9px] text-midnight/50 ml-1 font-medium">5.0</span>
+                        </div>
+                        <p class="text-[10px] text-midnight/60 mb-1.5 font-medium">9.000 BTU · Siêu tiết kiệm</p>
+                        <div class="flex items-baseline gap-1.5 mb-1.5 mt-auto">
+                            <span class="text-base font-black text-teal">8.990.000₫</span>
+                        </div>
+                        <div class="flex flex-col gap-0.5 mb-1.5 border-t border-warmgrey/20 pt-1.5">
+                            <a href="https://sudospaces.com/baohanhlivotec/baohanhlivotec/2025/11/hdsd-dieu-khien-dieu-hoa.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="file-text" class="w-3 h-3"></i> Hướng dẫn sử dụng
+                            </a>
+                            <a href="https://livotec.com/wp-content/uploads/2025/11/Huong-dan-bao-quan-dieu-hoa-3-sao.pdf"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-[10px] text-midnight/60 hover:text-teal font-medium transition-colors">
+                                <i data-lucide="shield-alert" class="w-3 h-3"></i> Hướng dẫn bảo quản
+                            </a>
+                        </div>
+                        <div class="space-y-1.5 relative z-20 mt-auto">
+                            <button onclick="openModal('prod-dh09')"
+                                class="w-full bg-white border border-warmgrey/40 text-midnight py-2 rounded-xl font-bold text-[11px]
+                                       hover:bg-gradient-to-r hover:from-skyblue/20 hover:to-skyblue/5 hover:border-skyblue/50 transition-all duration-300 shadow-sm">
+                                Xem thông số</button>
+                            <a href="https://livotec.com/dieu-hoa-mot-chieu-livotec-dh09-inverter.html" target="_blank"
+                                class="w-full flex justify-center items-center gap-1
+                                       bg-gradient-to-r from-red-500 to-[#D80088] text-white py-2 rounded-xl font-bold text-[11px]
+                                       hover:shadow-lg hover:scale-[1.02] transition-all duration-300 shadow-sm">
+                                <i data-lucide="shopping-cart" class="w-3 h-3"></i> Tôi muốn mua
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Carousel indicators + swipe hint -->
+            <div class="flex flex-col items-center gap-1.5 mt-1">
+                <!-- Dot indicators -->
+                <div id="carousel-dots" class="flex items-center gap-1.5">
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-[#00b9ad] transition-all duration-300"></div>
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-warmgrey/30 transition-all duration-300"></div>
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-warmgrey/30 transition-all duration-300"></div>
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-warmgrey/30 transition-all duration-300"></div>
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-warmgrey/30 transition-all duration-300"></div>
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-warmgrey/30 transition-all duration-300"></div>
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-warmgrey/30 transition-all duration-300"></div>
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-warmgrey/30 transition-all duration-300"></div>
+                </div>
+                <!-- Swipe hint with animation -->
+                <div class="flex items-center gap-1.5 text-midnight/40 swipe-hint">
+                    <i data-lucide="move-horizontal" class="w-3 h-3"></i>
+                    <span class="text-[9px] font-semibold tracking-wide">Vuốt ngang để xem thêm</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA bottom -->
+        <div class="flex justify-center mt-1.5 pb-1 relative z-20 w-full">
+            <a href="#sec-warranty" class="bg-gradient-to-r from-[#00b9ad] to-[#00a89d] text-white px-5 py-2 rounded-full shadow-md text-[10px] font-bold tracking-wide
+                       hover:from-[#D80088] hover:to-[#c00078] hover:shadow-lg hover:scale-105
+                       transition-all duration-300 z-20 group flex items-center gap-1.5 cta-pulse">
+                KHÁM PHÁ CHÍNH SÁCH BẢO HÀNH
+                <i data-lucide="arrow-down"
+                    class="w-3 h-3 group-hover:translate-y-1 transition-transform duration-300"></i>
             </a>
         </div>
     </section>
 
-    <!-- SECTION 6: WARRANTY & SUPPORT -->
+
+    <!-- Products Section: Animations & Carousel Logic -->
+    <style>
+        /* Scroll-triggered card entrance */
+        .product-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.4s ease, border-color 0.3s ease;
+        }
+
+        .product-card.card-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Title animation */
+        .product-title-line {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .product-heading.heading-visible .product-title-line {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-heading.heading-visible .product-title-line:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        /* Underline animation */
+        .product-underline {
+            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .product-heading.heading-visible .product-underline {
+            width: 120px;
+        }
+
+        /* Active carousel dot */
+        .carousel-dot.dot-active {
+            background-color: #00b9ad;
+            width: 1.25rem;
+            border-radius: 9999px;
+        }
+
+        /* Swipe hint pulse */
+        .swipe-hint {
+            animation: swipeHintPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes swipeHintPulse {
+
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: translateX(0);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: translateX(4px);
+            }
+        }
+
+        /* CTA subtle pulse glow */
+        .cta-pulse {
+            animation: ctaGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes ctaGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 6px -1px rgba(0, 185, 173, 0.2), 0 2px 4px -2px rgba(0, 185, 173, 0.1);
+            }
+
+            50% {
+                box-shadow: 0 4px 15px -1px rgba(0, 185, 173, 0.4), 0 2px 8px -2px rgba(0, 185, 173, 0.2);
+            }
+        }
+
+        /* Shine sweep for cards */
+        .product-card .absolute.-z-5 {
+            pointer-events: none;
+        }
+    </style>
+
+    <script>
+        (function () {
+            // === Scroll-triggered animations ===
+            const productSection = document.getElementById('sec-products');
+            if (!productSection) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Heading animation
+                        const heading = entry.target.querySelector('.product-heading');
+                        if (heading) heading.classList.add('heading-visible');
+
+                        // Stagger cards
+                        const cards = entry.target.querySelectorAll('.product-card');
+                        cards.forEach((card, i) => {
+                            setTimeout(() => {
+                                card.classList.add('card-visible');
+                            }, 200 + (i * 100));
+                        });
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            observer.observe(productSection);
+
+            // === Carousel dot indicators ===
+            const carousel = document.getElementById('product-carousel');
+            const dots = document.querySelectorAll('.carousel-dot');
+
+            if (carousel && dots.length) {
+                function updateDots() {
+                    const scrollLeft = carousel.scrollLeft;
+                    const cardWidth = carousel.querySelector('.product-card')?.offsetWidth || 240;
+                    const gap = 12; // gap-3 = 12px
+                    const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
+
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('dot-active', i === activeIndex);
+                        if (i !== activeIndex) {
+                            dot.style.width = '0.5rem';
+                            dot.style.backgroundColor = '';
+                        }
+                    });
+                }
+
+                carousel.addEventListener('scroll', updateDots, { passive: true });
+                updateDots(); // init
+            }
+
+            // === Carousel scroll function ===
+            window.scrollCarousel = function (direction) {
+                if (!carousel) return;
+                const cardWidth = carousel.querySelector('.product-card')?.offsetWidth || 240;
+                carousel.scrollBy({ left: direction * (cardWidth + 12), behavior: 'smooth' });
+            };
+
+            // === Hide swipe hint after first interaction ===
+            const swipeHint = productSection.querySelector('.swipe-hint');
+            if (carousel && swipeHint) {
+                let hintHidden = false;
+                carousel.addEventListener('scroll', () => {
+                    if (!hintHidden && carousel.scrollLeft > 50) {
+                        swipeHint.style.opacity = '0';
+                        swipeHint.style.transition = 'opacity 0.5s ease';
+                        hintHidden = true;
+                    }
+                }, { passive: true });
+            }
+        })();
+    </script>
+
+    <!-- SECTION 6: WARRANTY & SUPPORT (Upgraded UI/UX) -->
     <section id="sec-warranty" class="bg-beige pt-8 pb-12 relative border-t border-white overflow-hidden flex flex-col">
-        <!-- Đưa cái Banner Section cũ lên đầu của Warranty Section -->
-        <div class="relative overflow-hidden w-full mb-10 rounded-b-[2rem] shadow-sm max-w-screen-2xl mx-auto">
-            <img src="Cover-Web_1920x650-px.webp" alt="Livotec Banner"
-                class="w-full h-[150px] md:h-[250px] object-cover"
+
+        <!-- Banner với parallax-like gradient -->
+        <div class="relative overflow-hidden w-full mb-10 rounded-b-[2rem] shadow-lg max-w-screen-2xl mx-auto group">
+            <img src="Cover-Web_1920x650-px.webp"
+                alt="Chính sách bảo hành điều hòa Livotec - 36 tháng bảo hành, 1 đổi 1 trong 90 ngày"
+                class="w-full h-[180px] md:h-[250px] object-cover transition-transform duration-700 group-hover:scale-105"
                 onerror="this.src='https://images.unsplash.com/photo-1541882103403-12502f211326?auto=format&fit=crop&w=1920'">
-            <div class="absolute inset-0 bg-gradient-to-t from-midnight/70 to-transparent flex items-end">
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-midnight/80 via-midnight/30 to-transparent flex items-end">
                 <div class="container mx-auto px-6 pb-6 max-w-screen-xl">
                     <div class="flex flex-wrap gap-2 md:gap-4 justify-center">
-                        <div
-                            class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full flex items-center gap-2 shadow-md">
-                            <i data-lucide="shield-check" class="w-4 h-4 text-teal"></i>
-                            <span class="font-bold text-midnight text-[10px] md:text-xs">Bảo hành 36 tháng</span>
+                        <div class="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 shadow-lg
+                                    hover:bg-teal hover:text-white hover:scale-105 transition-all duration-300 cursor-default
+                                    animate-[fadeInUp_0.6s_ease-out_both]">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            <span class="font-bold text-[10px] md:text-xs">Bảo hành 36 tháng</span>
                         </div>
-                        <div
-                            class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full flex items-center gap-2 shadow-md">
-                            <i data-lucide="repeat" class="w-4 h-4 text-blush"></i>
-                            <span class="font-bold text-midnight text-[10px] md:text-xs">1 Đổi 1 trong 90 ngày</span>
+                        <div class="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 shadow-lg
+                                    hover:bg-[#D80088] hover:text-white hover:scale-105 transition-all duration-300 cursor-default
+                                    animate-[fadeInUp_0.6s_ease-out_0.15s_both]">
+                            <i data-lucide="repeat" class="w-4 h-4"></i>
+                            <span class="font-bold text-[10px] md:text-xs">1 Đổi 1 trong 90 ngày</span>
                         </div>
-                        <div
-                            class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full flex items-center gap-2 shadow-md">
-                            <i data-lucide="package" class="w-4 h-4 text-teal"></i>
-                            <span class="font-bold text-midnight text-[10px] md:text-xs">i-Carry lắp ráp dễ</span>
+                        <div class="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 shadow-lg
+                                    hover:bg-[#706E6F] hover:text-white hover:scale-105 transition-all duration-300 cursor-default
+                                    animate-[fadeInUp_0.6s_ease-out_0.3s_both]">
+                            <i data-lucide="package" class="w-4 h-4"></i>
+                            <span class="font-bold text-[10px] md:text-xs">i-Carry lắp ráp dễ</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Background decorations (animated) -->
         <div
-            class="absolute top-0 right-0 w-full md:w-1/2 h-full bg-skyblue/30 rounded-l-full pointer-events-none blur-3xl opacity-60">
+            class="absolute top-1/3 right-0 w-full md:w-1/2 h-1/2 bg-skyblue/20 rounded-l-full pointer-events-none blur-3xl opacity-50 animate-pulse">
         </div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-blush/20 rounded-r-full pointer-events-none blur-3xl opacity-40 animate-pulse"
+            style="animation-delay: 1.5s;"></div>
 
-        <div class="container mx-auto px-6 relative z-10 text-center max-w-screen-md flex-grow">
-            <h2 class="text-2xl md:text-4xl font-extrabold text-[#D80088] leading-relaxed mb-8">
-                ĐẶC QUYỀN BẢO HÀNH<br><span class="text-[#00b9ad] drop-shadow-sm mt-3">VƯỢT TRỘI</span>
+        <!-- Content -->
+        <div class="container mx-auto px-6 relative z-10 text-center max-w-screen-lg flex-grow">
+            <h2 class="text-2xl md:text-4xl font-extrabold mb-8 animate-[fadeInUp_0.8s_ease-out_both]">
+                <span class="block text-[#D80088] leading-normal">ĐẶC QUYỀN BẢO HÀNH</span>
+                <span class="block text-[#00b9ad] drop-shadow-sm mt-2">VƯỢT TRỘI</span>
             </h2>
 
-            <div class="flex flex-col md:flex-row gap-4 items-stretch">
+            <!-- 3 Cards thay vì 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
 
-                <div
-                    class="flex-1 bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-white w-full text-left flex flex-col transition hover:shadow-md">
-                    <div class="flex items-center gap-3 mb-2">
-                        <div class="w-8 h-8 bg-skyblue/30 rounded-full flex items-center justify-center">
-                            <i data-lucide="wrench" class="w-4 h-4 text-midnight"></i>
+                <!-- Card 1: 1 đổi 1 -->
+                <div class="group bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white/80 text-left flex flex-col
+                            transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:border-[#D80088]/30
+                            animate-[fadeInUp_0.6s_ease-out_0.1s_both]">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-[#D80088]/20 to-blush/30 rounded-xl flex items-center justify-center
+                                    group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                            <i data-lucide="repeat" class="w-5 h-5 text-[#D80088]"></i>
                         </div>
                         <p class="font-bold text-midnight text-sm">Chính sách 1 đổi 1</p>
                     </div>
-                    <p class="text-xs text-midnight/70 leading-relaxed h-full">
-                        Đổi mới nguyên chiếc (phần dàn nóng hoặc dàn lạnh bị hư hỏng) do lỗi nhà sản xuất trong 90 ngày
-                        đầu tiên.
+                    <p class="text-xs text-midnight/70 leading-relaxed flex-grow text-justify line-clamp-2">
+                        Đổi mới nguyên chiếc do lỗi nhà sản xuất trong <strong class="text-[#D80088]">90 ngày</strong>
+                        đầu, áp dụng cho cả dàn nóng và dàn lạnh.
                     </p>
+                    <div class="mt-3 pt-3 border-t border-warmgrey/20">
+                        <span class="text-[10px] font-semibold text-[#D80088] flex items-center gap-1">
+                            <i data-lucide="check-circle" class="w-3 h-3"></i> Không phát sinh chi phí
+                        </span>
+                    </div>
                 </div>
 
-                <div
-                    class="flex-1 bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-white w-full text-left flex flex-col transition hover:shadow-md">
-                    <div class="flex items-center gap-3 mb-2">
-                        <div class="w-8 h-8 bg-blush/30 rounded-full flex items-center justify-center">
-                            <i data-lucide="shield" class="w-4 h-4 text-midnight"></i>
+                <!-- Card 2: Bảo hành 36 tháng -->
+                <div class="group bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white/80 text-left flex flex-col
+                            transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:border-teal/30
+                            animate-[fadeInUp_0.6s_ease-out_0.25s_both]">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-teal/20 to-[#00b9ad]/30 rounded-xl flex items-center justify-center
+                                    group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-teal"></i>
                         </div>
                         <p class="font-bold text-midnight text-sm">Bảo hành 36 tháng</p>
                     </div>
-                    <p class="text-xs text-midnight/70 leading-relaxed text-justify h-full">
-                        An tâm sử dụng dài lâu với chính sách bảo hành chính hãng toàn diện lên đến 36 tháng cho toàn bộ
-                        sản phẩm.
+                    <p class="text-xs text-midnight/70 leading-relaxed flex-grow text-justify line-clamp-2">
+                        An tâm sử dụng với bảo hành chính hãng toàn diện lên đến <strong class="text-teal">36
+                            tháng</strong> cho toàn bộ sản phẩm.
                     </p>
+                    <div class="mt-3 pt-3 border-t border-warmgrey/20">
+                        <span class="text-[10px] font-semibold text-teal flex items-center gap-1">
+                            <i data-lucide="check-circle" class="w-3 h-3"></i> Bảo hành tại nhà toàn quốc
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 3: i-Carry (MỚI) -->
+                <div class="group bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white/80 text-left flex flex-col
+                            transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:border-blue/30
+                            animate-[fadeInUp_0.6s_ease-out_0.4s_both]">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-[#706E6F]/20 to-white/20 rounded-xl flex items-center justify-center
+                                    group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                            <i data-lucide="package" class="w-5 h-5 text-midnight"></i>
+                        </div>
+                        <p class="font-bold text-midnight text-sm">i-Carry lắp ráp dễ</p>
+                    </div>
+                    <p class="text-xs text-midnight/70 leading-relaxed flex-grow text-justify line-clamp-2">
+                        Thiết kế module <strong class="text-blue">i-Carry</strong> giúp lắp đặt nhanh chóng, tiết
+                        kiệm thời gian và chi phí nhân công.
+                    </p>
+                    <div class="mt-3 pt-3 border-t border-warmgrey/20">
+                        <span class="text-[10px] font-semibold text-blue flex items-center gap-1">
+                            <i data-lucide="check-circle" class="w-3 h-3"></i> Lắp đặt trong 30 phút
+                        </span>
+                    </div>
                 </div>
 
             </div>
         </div>
 
-        <div class="flex justify-center mt-6 relative z-20 w-full">
-            <a href="#sec-footer"
-                class="inline-flex items-center justify-center gap-2 bg-midnight text-white px-8 py-3.5 rounded-full font-bold text-[11px] hover:bg-teal transition shadow-lg animate-bounce group">
-                ĐĂNG KÝ NHẬN TƯ VẤN NGAY <i data-lucide="arrow-down-circle"
-                    class="w-4 h-4 group-hover:translate-y-1 transition"></i>
+        <!-- CTA Button (không bounce vĩnh viễn) -->
+        <div class="flex justify-center mt-8 relative z-20 w-full animate-[fadeInUp_0.6s_ease-out_0.6s_both]">
+            <a href="#sec-footer" class="inline-flex items-center justify-center gap-2 text-white px-8 py-3.5 rounded-full font-bold text-[10px] shadow-lg
+                       bg-[#D80088]
+                       hover:bg-[#00b9ad] hover:shadow-xl hover:scale-105
+                       transition-all duration-500 group">
+                ĐĂNG KÝ NHẬN TƯ VẤN NGAY
+                <i data-lucide="arrow-down-circle" class="w-4 h-4 group-hover:translate-y-1 transition"></i>
             </a>
         </div>
     </section>
 
-    <!-- SECTION 7: CÓ THỂ BẠN QUAN TÂM (Combined Footer & Form) -->
-    <section id="sec-footer" class="bg-blush py-20 relative border-t-4 border-white overflow-hidden">
-        <div class="absolute inset-0 bg-white/40 blur-3xl pointer-events-none opacity-60"></div>
+    <!-- Keyframes cho animations -->
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <!-- Scroll-triggered animations (chỉ animate khi section xuất hiện trên viewport) -->
+    <script>
+        (function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('[class*="animate-[fadeInUp"]').forEach(el => {
+                            el.style.animationPlayState = 'running';
+                        });
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            const section = document.getElementById('sec-warranty');
+            if (section) {
+                // Pause tất cả animation ban đầu, chỉ play khi scroll tới
+                section.querySelectorAll('[class*="animate-[fadeInUp"]').forEach(el => {
+                    el.style.animationPlayState = 'paused';
+                });
+                observer.observe(section);
+            }
+        })();
+    </script>
+
+    <!-- SECTION 7: LIÊN HỆ TƯ VẤN (Combined Footer & Form - Upgraded) -->
+    <section id="sec-footer" class="bg-blush py-12 relative border-t-4 border-white overflow-hidden">
+
+        <!-- Animated background decorations -->
+        <div class="absolute inset-0 bg-white/40 blur-3xl pointer-events-none opacity-50"></div>
+        <div
+            class="absolute top-0 left-0 w-1/3 h-1/2 bg-[#D80088]/10 rounded-br-full pointer-events-none blur-3xl animate-pulse">
+        </div>
+        <div class="absolute bottom-0 right-0 w-1/3 h-1/2 bg-teal/10 rounded-tl-full pointer-events-none blur-3xl animate-pulse"
+            style="animation-delay: 2s;"></div>
+
         <div class="container mx-auto px-6 relative z-10 max-w-screen-xl">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-midnight uppercase tracking-wider">
-                    Có thể bạn quan tâm
+            <div class="text-center mb-8 animate-[fadeInUp_0.6s_ease-out_both]">
+                <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wider">
+                    <span class="text-[#D80088]">LIÊN HỆ</span>
+                    <span class="text-[#00b9ad] ml-2">TƯ VẤN</span>
                 </h2>
+                <p class="text-xs text-midnight/60 mt-2 font-medium">Để lại thông tin — chuyên viên sẽ liên hệ bạn trong
+                    vòng 30 phút</p>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <div class="grid lg:grid-cols-2 gap-10 items-start">
 
                 <!-- Left: Form -->
-                <div
-                    class="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl relative periodic-shake border border-white w-full text-left">
+                <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl relative border border-white/80 w-full text-left
+                            hover:shadow-2xl transition-shadow duration-500
+                            animate-[fadeInUp_0.6s_ease-out_0.15s_both]">
+
+                    <!-- Decoration blob -->
+                    <div
+                        class="absolute -top-6 -right-6 w-24 h-24 bg-[#D80088]/10 rounded-full blur-2xl pointer-events-none">
+                    </div>
+
                     <h3 class="text-xl md:text-2xl font-bold text-midnight mb-6 text-center">Đăng ký tư vấn ngay!</h3>
-                    <form class="space-y-4" onsubmit="event.preventDefault(); sendEmail();">
-                        <div>
-                            <input type="text" id="cusName" required placeholder="Họ và tên của bạn"
-                                class="w-full p-4 rounded-xl bg-beige/50 border border-warmgrey/50 focus:ring-2 focus:ring-blush outline-none transition font-medium text-midnight text-sm">
+
+                    <form id="consultForm" class="space-y-4" onsubmit="event.preventDefault(); sendEmail();">
+                        <div class="group">
+                            <input type="text" id="cusName" name="cusName" required placeholder="Họ và tên của bạn"
+                                class="w-full p-4 rounded-xl bg-beige/50 border border-warmgrey/50
+                                       focus:ring-2 focus:ring-[#D80088]/30 focus:border-[#D80088]/50
+                                       outline-none transition-all duration-300 font-medium text-midnight text-sm
+                                       hover:border-warmgrey">
                         </div>
-                        <div>
-                            <input type="tel" id="cusPhone" required placeholder="Số điện thoại liên hệ"
-                                class="w-full p-4 rounded-xl bg-beige/50 border border-warmgrey/50 focus:ring-2 focus:ring-blush outline-none transition font-medium text-midnight text-sm">
+                        <div class="group">
+                            <input type="tel" id="cusPhone" name="cusPhone" required placeholder="Số điện thoại liên hệ"
+                                pattern="(0[3|5|7|8|9])+([0-9]{8})" title="Nhập số điện thoại hợp lệ (VD: 0912345678)"
+                                class="w-full p-4 rounded-xl bg-beige/50 border border-warmgrey/50
+                                       focus:ring-2 focus:ring-[#D80088]/30 focus:border-[#D80088]/50
+                                       outline-none transition-all duration-300 font-medium text-midnight text-sm
+                                       hover:border-warmgrey">
                         </div>
-                        <div class="relative">
-                            <select id="cusArea" required
-                                class="w-full p-4 rounded-xl bg-beige/50 border border-warmgrey/50 focus:ring-2 focus:ring-blush outline-none appearance-none font-medium text-midnight text-sm">
+                        <div class="relative group">
+                            <select id="cusArea" name="cusArea" required class="w-full p-4 rounded-xl bg-beige/50 border border-warmgrey/50
+                                       focus:ring-2 focus:ring-[#D80088]/30 focus:border-[#D80088]/50
+                                       outline-none appearance-none transition-all duration-300 font-medium text-midnight text-sm
+                                       hover:border-warmgrey">
                                 <option value="" disabled selected>-- Diện tích phòng cần lắp --</option>
                                 <option value="Dưới 15m² (9000 BTU)">Dưới 15m² (Phù hợp 9000 BTU)</option>
                                 <option value="Từ 15 - 20m² (12000 BTU)">Từ 15 - 20m² (Phù hợp 12000 BTU)</option>
@@ -1561,61 +2185,104 @@
                             <i data-lucide="chevron-down"
                                 class="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-midnight/50 pointer-events-none"></i>
                         </div>
-                        <!-- Bắn thẳng vào mailto:cskh@livotec.com -->
-                        <button type="submit"
-                            class="w-full bg-midnight text-white p-4 rounded-xl font-bold text-base hover:bg-teal transition-all flex items-center justify-center gap-2 shadow-sm mt-2">
-                            GỬI YÊU CẦU <i data-lucide="send" class="w-4 h-4"></i>
+
+                        <button type="submit" id="submitBtn" class="w-full bg-[#D80088] text-white p-4 rounded-xl font-bold text-base
+                                   hover:bg-[#00b9ad] hover:scale-[1.02]
+                                   active:scale-[0.98]
+                                   transition-all duration-300 flex items-center justify-center gap-2 shadow-lg mt-2">
+                            <span id="btnText">GỬI YÊU CẦU</span>
+                            <i data-lucide="send" class="w-4 h-4" id="btnIcon"></i>
+                            <!-- Loading spinner (ẩn mặc định) -->
+                            <svg id="btnSpinner" class="hidden w-5 h-5 animate-spin" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" class="opacity-25"></circle>
+                                <path d="M4 12a8 8 0 018-8" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" class="opacity-75"></path>
+                            </svg>
                         </button>
-                        <p class="text-[10px] text-center text-midnight/60 mt-2 font-medium">Cam kết 1 đổi 1 trong 90
-                            ngày. Bảo hành 36 tháng.</p>
+
+                        <!-- Success message (ẩn mặc định) -->
+                        <div id="successMsg" class="hidden text-center p-3 bg-teal/10 rounded-xl border border-teal/30">
+                            <p class="text-sm font-bold text-teal flex items-center justify-center gap-1.5">
+                                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                                Đã gửi thành công! Chuyên viên sẽ liên hệ bạn sớm.
+                            </p>
+                        </div>
+
+                        <p class="text-[10px] text-center text-midnight/60 mt-2 font-medium">
+                            Cam kết 1 đổi 1 trong 90 ngày · Bảo hành 36 tháng
+                        </p>
                     </form>
                 </div>
 
+
                 <!-- Right: Info -->
-                <div class="flex flex-col justify-center space-y-8 h-full">
-                    <div class="text-center lg:text-left">
-                        <!-- Karofi Badge -->
+                <div class="flex flex-col justify-center space-y-6 h-full">
+
+                    <!-- Karofi Badge with Shine Animation -->
+                    <div class="text-center lg:text-left animate-[fadeInUp_0.6s_ease-out_0.3s_both]">
                         <div
-                            class="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full shadow-sm shine-badge border border-white mb-1">
-                            <img src="logo Karofi.jpg" alt="Karofi" class="h-4" style="mix-blend-mode:multiply;"
-                                onerror="this.src='https://karofi.com/themes/karofi/images/logo-karofi-2023.svg'">
-                            <span class="text-[9px] font-extrabold text-midnight uppercase tracking-wider">Bảo chứng bởi
-                                Tập đoàn
-                                Karofi</span>
+                            class="karofi-badge inline-flex items-center gap-3 bg-white px-5 py-3 rounded-2xl shadow-lg border border-warmgrey/20
+                                    hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default relative overflow-hidden">
+                            <!-- Shine sweep effect -->
+                            <div class="absolute inset-0 shine-sweep pointer-events-none"></div>
+                            <img src="logo-karofi-2026.png" alt="Logo Tập đoàn Karofi" class="h-8 relative z-10"
+                                onerror="this.src='https://karofi.karofi.com/karofi-com/2026/03/karofi-logo-2026.png'">
+                            <div class="relative z-10">
+                                <p
+                                    class="text-[10px] font-extrabold text-midnight uppercase tracking-wider leading-tight">
+                                    Bảo chứng bởi</p>
+                                <p class="text-xs font-black text-[#2AABE2] uppercase tracking-wider">Tập đoàn Karofi
+                                </p>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- Contact cards -->
                     <div class="flex flex-col gap-4">
-                        <div
-                            class="flex items-center gap-4 bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white w-full text-left">
-                            <div
-                                class="w-12 h-12 bg-skyblue/30 rounded-full flex items-center justify-center shadow-sm">
-                                <i data-lucide="phone-call" class="w-5 h-5 text-midnight"></i>
+                        <!-- Hotline -->
+                        <div class="group flex items-center gap-4 bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white w-full text-left
+                                    hover:shadow-lg hover:-translate-y-1 hover:border-teal/30
+                                    transition-all duration-400
+                                    animate-[fadeInUp_0.6s_ease-out_0.4s_both]">
+                            <div class="w-12 h-12 bg-gradient-to-br from-skyblue/30 to-teal/20 rounded-xl flex items-center justify-center shadow-sm
+                                        group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                <i data-lucide="phone-call" class="w-5 h-5 text-teal"></i>
                             </div>
                             <div>
-                                <p class="text-[10px] font-bold text-midnight/60 uppercase">Hotline toàn quốc</p>
-                                <p class="text-xl font-black text-midnight">1800 2298 (07:30 - 21:00)</p>
+                                <p class="text-[10px] font-bold text-midnight/60 uppercase tracking-wide">Hotline toàn
+                                    quốc</p>
+                                <p class="text-xl font-black text-midnight">1800 2298</p>
+                                <p class="text-[10px] text-midnight/50 font-medium">07:30 - 21:00 hàng ngày</p>
                             </div>
                         </div>
-                        <div
-                            class="flex items-center gap-4 bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white w-full text-left">
-                            <div class="w-12 h-12 bg-blush/30 rounded-full flex items-center justify-center shadow-sm">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-midnight"></i>
+
+                        <!-- Mạng lưới -->
+                        <div class="group flex items-center gap-4 bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white w-full text-left
+                                    hover:shadow-lg hover:-translate-y-1 hover:border-[#D80088]/30
+                                    transition-all duration-400
+                                    animate-[fadeInUp_0.6s_ease-out_0.5s_both]">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blush/30 to-[#D80088]/20 rounded-xl flex items-center justify-center shadow-sm
+                                        group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-[#D80088]"></i>
                             </div>
                             <div>
-                                <p class="text-[10px] font-bold text-midnight/60 uppercase">Mạng lưới bảo hành</p>
-                                <p class="text-[11px] font-bold text-midnight">> 7.000 điểm trạm toàn quốc</p>
+                                <p class="text-[10px] font-bold text-midnight/60 uppercase tracking-wide">Mạng lưới bảo
+                                    hành</p>
+                                <p class="text-xl font-black text-midnight">7.000+</p>
+                                <p class="text-[10px] text-midnight/50 font-medium">Điểm trạm bảo hành toàn quốc</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Liên kết Kích cầu Website Chính thức -->
                     <div class="border-t border-midnight/10 pt-4 text-center lg:text-left">
-                        <p class="text-midnight/80 font-medium text-xs mb-3">Bạn muốn tìm hiểu thêm các dòng sản phẩm
+                        <p class="text-midnight/80 font-medium text-xs mb-3">Bạn muốn tìm hiểu thêm các dòng sản
+                            phẩm
                             gia dụng thời trang khác?</p>
                         <a href="https://livotec.com/" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center justify-center gap-1.5 bg-[#00b9ad] text-white font-bold px-5 py-2.5 rounded-full hover:bg-midnight hover:text-white transition shadow-sm group text-[10px] w-full sm:w-auto">
-                            Khám phá Hệ sinh thái Livotec <i data-lucide="external-link"
+                            KHÁM PHÁ HỆ SINH THÁI LIVOTEC <i data-lucide="external-link"
                                 class="w-3 h-3 group-hover:translate-x-1 transition"></i>
                         </a>
                     </div>
@@ -1860,11 +2527,25 @@
             }, 300);
         }
 
-        // Product Carousel Scroll Logic
+        // Product Carousel Scroll Logic (loop vô hạn)
         function scrollCarousel(direction) {
             const carousel = document.getElementById('product-carousel');
-            const scrollAmount = window.innerWidth < 768 ? window.innerWidth * 0.85 : 280 + 16; // width + gap
-            carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            const scrollAmount = window.innerWidth < 768 ? window.innerWidth * 0.85 : 280 + 16;
+
+            if (direction === 1) {
+                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                if (carousel.scrollLeft >= maxScroll - 10) {
+                    carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            } else {
+                if (carousel.scrollLeft <= 10) {
+                    carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'smooth' });
+                } else {
+                    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                }
+            }
         }
 
         // Video Audio Toggle Logic
